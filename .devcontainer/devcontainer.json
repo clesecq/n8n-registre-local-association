@@ -1,0 +1,21 @@
+{
+  "name": "n8n-registre-local-association",
+  "context": "..",
+  "dockerFile": "Containerfile",
+  "postCreateCommand": "pnpm install",
+  "remoteUser": "node",
+  "workspaceMount": "",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "runArgs": [
+    "--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
